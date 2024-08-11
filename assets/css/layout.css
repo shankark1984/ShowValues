@@ -5,7 +5,7 @@
     height: calc(100vh - 60px); /* Full height minus navbar height */
     overflow-y: auto; /* Scroll if content overflows */
     transition: transform 0.3s ease-in-out;
-    z-index: 1000; /* Ensure it stays above other content */
+    /* z-index: 1000; Ensure it stays above other content */
     padding: 10px; /* Add some padding inside */
     box-sizing: border-box; /* Include padding in the width calculation */
 }
