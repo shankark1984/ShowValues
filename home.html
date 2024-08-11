@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Values</title>
+    <!-- Link to the default theme -->
+    <link id="theme-link" rel="stylesheet" href="assets/css/styles-default.css">
+    <!-- Link to the main layout stylesheet -->
+    <link rel="stylesheet" href="assets/css/layout.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="Menu.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Left Sidebar for Menu -->
+    <div class="left-sidebar">
+        <h3>MENU</h3>
+        <ul id="category-list">
+            <!-- Categories will be loaded here dynamically -->
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div id="menu-container" class="menu-grid">
+            <!-- Menu items will be dynamically loaded here -->
+        </div>
+    </div>
+    
+
+    <!-- Right Sidebar for Cart -->
+    <div class="right-sidebar">
+        <div class="cart-box">
+            <h3>Your Cart</h3>
+            <ul id="cart-list">
+                <!-- Items added to the cart will be listed here -->
+            </ul>
+            <p>Total: <span id="cart-total">0.00</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>2024 &copy; SHOW VALUES</p>
+        <select id="theme-selector">
+            <option value="default">Default</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/themeSwitcher.js"></script>
+    <script src="assets/js/categories.js"></script>
+    <!-- <script src="assets/js/sidebar.js"></script> -->
+    <script src="assets/js/menu.js"></script>
+</body>
+
+</html>

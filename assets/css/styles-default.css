@@ -1,0 +1,115 @@
+/* Default Theme */
+:root {
+    --backgroundColor: linear-gradient(145deg, #f0f0f0, #cacaca);
+    --cardColor:linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    --buttonColor: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+  }
+
+body {
+    background: var(--backgroundColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 10px;
+    margin-left:0px ;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    background: var( --cardColor);
+    border-radius: 20px;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Fit within the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    height: 400px;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+button {
+    background: var(--buttonColor);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #d4d4d4;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var( --cardColor);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    /* Align items horizontally */
+    align-items: center;
+    /* Vertically center items */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    margin: 0;
+    /* Remove default margin */
+    color: aliceblue;
+}
+
+.footer select {
+    /* margin: 0; Remove default margin */
+    margin-right: 20px;
+}
+
+
+/* Navbar styles */
+.navbar {
+    background: var( --cardColor); /* Dark background */
+    overflow: hidden; /* Clear floats */
+    position: fixed; /* Fixed position at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    display: flex; /* Horizontal layout */
+    justify-content: flex-end; /* Align items to the right */
+}
+
+.navbar li {
+    padding: 14px 20px; /* Padding for list items */
+}
+
+.navbar a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+}
+
+.navbar a:hover {
+    background-color: #575757; /* Change background on hover */
+}
+
+/* Ensure the body doesn't get hidden behind the navbar */
+body {
+    padding-top: 60px; /* Add padding to the top */
+}

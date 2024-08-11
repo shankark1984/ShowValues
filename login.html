@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Values</title>
+    <link id="theme-link" rel="stylesheet" href="assets/css/styles-default.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="card">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+
+            <input type="password" id="password" placeholder="Password">
+            <select id="branch-list-dropdown" aria-label="Select Branch" class="selectBranch">
+                <!-- Branch options will be inserted here -->
+            </select>
+
+            <button onclick="login()">Login</button>
+            <div id="message"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>2024 @ SHOW VALUES</p>
+        <select id="theme-selector">
+            <option value="default">Default</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </div>
+
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/themeSwitcher.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+/* General Styles for Sidebars */
+.left-sidebar, .right-sidebar {
+    position: fixed;
+    top: 60px; /* Adjust based on your navbar height */
+    height: calc(100vh - 60px); /* Full height minus navbar height */
+    overflow-y: auto; /* Scroll if content overflows */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000; /* Ensure it stays above other content */
+    padding: 10px; /* Add some padding inside */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+/* Left Sidebar Styles */
+.left-sidebar {
+    left: 0;
+    width: 200px;
+    background-color: #f0f0f0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(0); /* Always visible */
+}
+
+.left-sidebar h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.2em; /* Increase font size for headings */
+}
+
+/* Category List Styles */
+#category-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#category-list li {
+    margin-bottom: 10px;
+}
+
+#category-list a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, padding-left 0.3s; /* Smooth transition for hover effects */
+}
+
+#category-list a:hover {
+    background-color: #d4d4d4;
+    padding-left: 20px; /* Indent on hover for better visual feedback */
+}
+
+/* Main Content Area */
+.main-content {
+    padding: 20px;
+    transition: margin 0.3s ease-in-out;
+}
+
+/* Menu Grid */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #aeaaaa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align text */
+}
+
+.menu-item h4 {
+    margin: 0 0 10px 0;
+}
+
+.menu-item p {
+    margin: 5px 0;
+}
+
+.menu-item button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-item button:hover {
+    background-color: #45a049;
+}
+
+/* Right Sidebar Styles */
+.right-sidebar {
+    right: 0;
+    width: 280px; /* Adjust as needed */
+    background-color: #f0f0f0;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(0); /* Always visible */
+}
+
+.cart-box h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.2em; /* Increase font size for headings */
+}
+
+#cart-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cart-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically */
+    margin-bottom: 10px;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+#cart-list li:last-child {
+    border-bottom: none; /* Remove border for the last item */
+}
+
+#cart-total {
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+    font-size: 1.1em; /* Slightly larger font for total */
+}
+
+/* Button Styles */
+.right-sidebar button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.right-sidebar button:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Slightly scale up on hover for visual feedback */
+}
+
+/* Media query for screens 768px and wider */
+@media (min-width: 768px) {
+    .main-content {
+        margin-left: 200px; /* Adjust based on the width of the left sidebar */
+        margin-right: 280px; /* Adjust based on the width of the right sidebar */
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+    .left-sidebar {
+        width: 100%; /* Full width on smaller screens */
+        transform: translateX(-100%); /* Hide initially on smaller screens */
+    }
+
+    .left-sidebar.show {
+        transform: translateX(0); /* Show when toggled */
+    }
+
+    .right-sidebar {
+        width: 100%; /* Full width on smaller screens */
+        transform: translateX(100%); /* Hide initially on smaller screens */
+    }
+
+    .right-sidebar.show {
+        transform: translateX(0); /* Show when toggled */
+    }
+}
